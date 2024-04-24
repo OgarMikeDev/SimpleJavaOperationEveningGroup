@@ -126,7 +126,6 @@ public class Main {
         int maxElement = Collections.max(list);
         System.out.println("Минимальное число: " + minElement +
                 "\nМаксимальное число: " + maxElement);
-
         int countNegativNumbers = 0;
         int countPositiveNumbers = 0;
         int countZeroNumber = 0;
