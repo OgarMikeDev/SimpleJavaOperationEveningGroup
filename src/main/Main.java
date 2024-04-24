@@ -122,7 +122,7 @@ public class Main {
         }
 
         System.out.println(text + "\nБукв в тексте: " + letter +
-                "\nЦифр в тексте: " + figure);
+                "\nЦифр в  тексте: " + figure);
 
     }
 
