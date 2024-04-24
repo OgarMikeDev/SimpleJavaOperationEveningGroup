@@ -137,6 +137,7 @@ public class Main {
 
     //Михаил
     public static boolean happyNumber(int number) {
+
         int number1 = number / 100_000;
         int number2 = number / 100_00 % 10;
         int number3 = number / 1000 % 10;
