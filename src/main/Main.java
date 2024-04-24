@@ -153,9 +153,8 @@ public class Main {
 
     //Ульяна
     public static void squarerectangle(int a, int b) {
-        int P = (a + b) * 2;
+        int P = (a + b) *  2;
         System.out.println("Площадь прямоугольника:  " + P);
-
     }
 
     //Ульяна
