@@ -1,9 +1,8 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +15,8 @@ public class Main {
         удаляя все остальное.
         Возвращает получившуюся строку.
          */
+        String scanner = new Scanner(System.in).nextLine();
+        System.out.println(lettersAndNumbers(scanner));
 
         /*
         Андрей.
@@ -76,8 +77,7 @@ public class Main {
         начислить ему премию 200$,
         вывести итоги в консоль.
          */
-
-
+        workWitchManagers(700,1200,200);
         /*
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
@@ -108,7 +108,21 @@ public class Main {
 
     //Вадим
     public static String lettersAndNumbers(String text) {
-        return "";
+
+        String regex = "[a-zA-Z]+";
+
+        Pattern pattern = Pattern.compile(regex);
+
+        Matcher matcher = pattern.matcher(text);
+
+        String n = " ";
+        while (matcher.find()) {
+            int start = matcher.start();
+            int end = matcher.end();
+            n = text.substring(start, end);
+        }
+
+        return n;
     }
 
     //Андрей
@@ -133,7 +147,30 @@ public class Main {
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
-    public static void workWitchManagers() {
+    public static void workWitchManagers(int salesOne, int salesTwo, int salesThree) {
+
+        int baseSalary = 200;
+        double commissionRate1 = 0.03;
+        double commissionRate2 = 0.05;
+        double commissionRate3 = 0.08;
+
+        double salary1 = baseSalary + salesOne * commissionRate1;
+        double salary2 = baseSalary + salesTwo * commissionRate2;
+        double salary3 = baseSalary + salesThree * commissionRate3;
+
+        double maxSalary = Math.max(salary1, Math.max(salary2,salary3));
+
+        String bestManager = maxSalary == salary1 ? "Менеджер первый" : (maxSalary == salary2 ? "Менеджер второй" : "Менеджер третий");
+
+        System.out.println("Зарплаты менеджеров:");
+        System.out.println("Менеджер один: $" + salary1);
+        System.out.println("Менеджер второй: $" + salary2);
+        System.out.println("Менеджер третий: $" + salary3);
+
+        int bonusSalary = 200;
+
+
+        System.out.println("\nЛучший менеджер: " + bestManager + "\nпПолучает премию: " + bonusSalary + "$");
     }
 
     //Ульяна
