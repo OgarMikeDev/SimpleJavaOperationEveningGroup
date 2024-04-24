@@ -1,14 +1,9 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-
-
          /*
         Вадим
         Написать метод, который принимает строку и
@@ -45,16 +40,6 @@ public class Main {
         5) Число нулей
          */
 
-        ArrayList<Integer> list = new ArrayList<>() {{
-            add(1);
-            add(2);
-            add(-10);
-            add(0);
-            add(0);
-        }};
-
-        printMaxAndMinAndCount(list);
-
         /*
         Сева.
         Написать метод, который принимает два целых числа (границы диапазона),
@@ -77,11 +62,12 @@ public class Main {
         вывести итоги в консоль.
          */
 
-
         /*
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
          */
+        getSquareAndPerimetr(7);
+        getSquareAndPerimetr(8);
 
         /*
         Дима.
@@ -102,7 +88,15 @@ public class Main {
         Написать метод, определяющий счастливое число и
         вернуть true, если - да, и - false - если нет.
          */
+        /*
+        ульяна
+        расчитать периметр прямоугольника
+         */
+        squarerectangle(4, 5);
 
+
+
+        factorial(8);
     }
 
     //Вадим
@@ -122,40 +116,12 @@ public class Main {
 
     //Александр
     public static void printMaxAndMinAndCount(ArrayList<Integer> list) {
-        int minElement = Collections.min(list);
-        int maxElement = Collections.max(list);
-        System.out.println("Минимальное число: " + minElement +
-                "\nМаксимальное число: " + maxElement);
-        int countNegativNumbers = 0;
-        int countPositiveNumbers = 0;
-        int countZeroNumber = 0;
-        for (int number : list) {
-            if (number < 0){
-                countNegativNumbers++;
-            } else if(number > 0){
-                countPositiveNumbers++;
-            } else if (number == 0) {
-                countZeroNumber++;
-            }
-        }
-
-
-        System.out.println("Колличество отрицательных чисел = " +countNegativNumbers +
-                "\nКолличество положительных чисел = " + countPositiveNumbers +
-                "\nКолличество нолей = " + countZeroNumber);
-
-
 
     }
 
-
     //Сева
     public static ArrayList<Integer> lettersAndNumbers(int numberFirst, int numberSecond) {
-        ArrayList<Integer> rangeNumbers = new ArrayList<>();
-        for (int i = numberFirst; i <= numberSecond; i++) {
-            rangeNumbers.add(i);
-        }
-        return new ArrayList<>(rangeNumbers);
+        return new ArrayList<>();
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
@@ -163,8 +129,11 @@ public class Main {
     }
 
     //Ульяна
-    public static void getSquareAndPerimetr() {
-
+    public static void getSquareAndPerimetr(int a) {
+        int S = a * a;
+        System.out.println("Площадь нашего квадрата: " + S);
+        int P = 4 * a;
+        System.out.println("Периметр квадрата: " + P);
     }
 
     //Дима
@@ -180,5 +149,22 @@ public class Main {
     //Михаил
     public static boolean happyNumber(int number) {
         return false;
+    }
+
+    //Ульяна
+    public static void squarerectangle(int a, int b) {
+        int P = (a + b) *  2;
+
+        System.out.println("Площадь прямоугольника:  " + P);
+    }
+
+    //Ульяна
+    public static void factorial(int i) {
+        int s = 1;
+        for (int a = 1; a <= i; a++) {
+            s *= a;
+
+        }
+        System.out.println(s);
     }
 }
