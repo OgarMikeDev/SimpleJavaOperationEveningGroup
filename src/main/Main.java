@@ -18,7 +18,6 @@ public class Main {
         System.out.println(lettersAndNumbers(scanner));
 
 
-
         /*
         Андрей.
         Написать метод для
