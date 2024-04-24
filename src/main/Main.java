@@ -92,6 +92,7 @@ public class Main {
         ульяна
         расчитать периметр прямоугольника
          */
+        squarerectangle(4, 5);
 
     }
 
@@ -146,7 +147,9 @@ public class Main {
     public static boolean happyNumber(int number) {
         return false;
     }
-//    public static void squarerectangle(int ) {
-//        int
-//    }
+    //Ульяна
+    public static void squarerectangle(int a, int b) {
+        int P = (a + b) * 2;
+        System.out.println("Площадь прямоугольника: " + P);
+   }
 }
