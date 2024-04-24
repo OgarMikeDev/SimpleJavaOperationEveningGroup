@@ -75,6 +75,10 @@ public class Main {
         на разных строках, а возвращает их сумму.
          */
 
+        System.out.println(getNumberTwoSybmol(12));
+
+
+
         /*
         Саша.
         Написать метод, вычисляющий площадь круга,
@@ -126,8 +130,12 @@ public class Main {
     }
 
     //Дима
-    public static int getNumberTwoSybmol(int NumberTwoSybmol) {
-        return 0;
+    public static int getNumberTwoSybmol(int numberTwoSybmol) {
+
+        int number = numberTwoSybmol / 10;
+        int number2 = numberTwoSybmol % 10;
+
+        return number + number2;
     }
 
     //Саша
@@ -153,4 +161,7 @@ public class Main {
         return false;
 
     }
+
+
+
 }
