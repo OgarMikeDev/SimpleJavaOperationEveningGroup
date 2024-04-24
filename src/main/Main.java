@@ -152,7 +152,6 @@ public class Main {
         int number4 = number / 100 % 10;
         int number5 = number / 10 % 10;
         int number6 = number % 10;
-
         int sum1 = number1 + number2 + number3;
         int sum2 = number4 + number5 + number6;
 
