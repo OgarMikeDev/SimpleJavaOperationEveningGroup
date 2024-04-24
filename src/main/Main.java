@@ -114,6 +114,7 @@ public class Main {
         ArrayList<Integer> rangeNumbers = new ArrayList<>();
         for (int i = numberFirst; i <= numberSecond; i++) {
             rangeNumbers.add(i);
+            //изменил
         }
         return new ArrayList<>(rangeNumbers);
     }
@@ -141,4 +142,6 @@ public class Main {
     public static boolean happyNumber(int number) {
         return false;
     }
+
+
 }
