@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -101,6 +102,27 @@ public class Main {
 
     //Рад
     public static void printLettersAndNumbers(String text) {
+
+        //This is the text to test my method of counting letter and figure in the text;
+
+        int letter = 0;
+        int figure = 0;
+
+        for (char ch : text.toCharArray()){
+
+            if (Character.isLetter(ch)) {
+                letter++;
+            }
+            else if (Character.isDigit(ch)) {
+                figure++;
+            }
+            else {
+                continue;
+            }
+        }
+
+        System.out.println(text + "\nБукв в тексте: " + letter +
+                "\nЦифр в тексте: " + figure);
 
     }
 
