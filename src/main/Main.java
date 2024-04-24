@@ -127,7 +127,7 @@ public class Main {
     //Ульяна
     public static void getSquareAndPerimetr(int a) {
             int S = a * a;
-        System.out.println("Площадь квадрата: " + S);
+        System.out.println("Площадь нашего квадрата: " + S);
             int P = 4 * a;
         System.out.println("Периметр квадрата: " + P );
     }
