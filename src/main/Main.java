@@ -156,6 +156,7 @@ public class Main {
 
         int bonusSalary = 200;
 
+
         System.out.println("\nЛучший менеджер: " + bestManager + "\nпПолучает премию: " + bonusSalary + "$");
 
 /*        System.out.println("\nBest manager: " + bestManager + "with a salary of" + bonusSalary);*/
