@@ -138,13 +138,34 @@ public class Main {
 
     //Александр
     public static void printMaxAndMinAndCount(ArrayList<Integer> list) {
+        int minElement = Collections.min(list);
+        int maxElement = Collections.max(list);
+        System.out.println("Минимальное число: " + minElement +
+                "\nМаксимальное число: " + maxElement);
+        int countNegativNumbers = 0;
+        int countPositiveNumbers = 0;
+        int countZeroNumber = 0;
+        for (int number : list) {
+            if (number < 0){
+                countNegativNumbers++;
+            } else if(number > 0){
+                countPositiveNumbers++;
+            } else if (number == 0) {
+                countZeroNumber++;
+            }
+        }
+        System.out.println("Колличество отрицательных чисел = " +countNegativNumbers +
+                "\nКолличество положительных чисел = " + countPositiveNumbers +
+                "\nКолличество нолей = " + countZeroNumber);
     }
 
 
     //Сева
     public static ArrayList<Integer> lettersAndNumbers(int numberFirst, int numberSecond) {
-
-    }
+        ArrayList<Integer> rangeNumbers = new ArrayList<>();
+        for (int i = numberFirst; i <= numberSecond; i++) {
+            rangeNumbers.add(i);
+        }        return new ArrayList<>(rangeNumbers);
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
     public static void workWitchManagers(int salesOne, int salesTwo, int salesThree) {
@@ -190,7 +211,22 @@ public class Main {
 
     //Михаил
     public static boolean happyNumber(int number) {
+        int number1 = number / 100_000;
+        int number2 = number / 100_00 % 10;
+        int number3 = number / 1000 % 10;
+        int number4 = number / 100 % 10;
+        int number5 = number / 10 % 10;
+        int number6 = number % 10;
 
+
+        int sum1 = number1 + number2 + number3;
+        int sum2 = number4 + number5 + number6;
+
+        if (sum1 == sum2) {
+            return true;
+        }
+        return false;
 
     }
+
 }
