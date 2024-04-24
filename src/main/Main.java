@@ -82,6 +82,7 @@ public class Main {
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
          */
+        getSquareAndPerimetr(8,9);
 
         /*
         Дима.
@@ -137,7 +138,9 @@ public class Main {
     }
 
     //Ульяна
-    public static void getSquareAndPerimetr() {
+    public static void getSquareAndPerimetr(int a, int b) {
+        int P = (a + b) *  2;
+        System.out.println("Площадь прямоугольника:  " + P);
 
     }
 
@@ -153,7 +156,6 @@ public class Main {
 
     //Михаил
     public static boolean happyNumber(int number) {
-
-
     }
+
 }
