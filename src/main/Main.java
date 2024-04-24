@@ -48,12 +48,13 @@ public class Main {
         ArrayList<Integer> list = new ArrayList<>() {{
             add(1);
             add(2);
-            add(-15);
+            add(-10);
             add(0);
             add(0);
         }};
 
         printMaxAndMinAndCount(list);
+
         /*
         Сева.
         Написать метод, который принимает два целых числа (границы диапазона),
@@ -88,10 +89,6 @@ public class Main {
         и выводит в консоль каждый его разряд
         на разных строках, а возвращает их сумму.
          */
-
-        System.out.println(getNumberTwoSybmol(12));
-
-
 
         /*
         Саша.
@@ -129,7 +126,6 @@ public class Main {
         int maxElement = Collections.max(list);
         System.out.println("Минимальное число: " + minElement +
                 "\nМаксимальное число: " + maxElement);
-
         int countNegativNumbers = 0;
         int countPositiveNumbers = 0;
         int countZeroNumber = 0;
@@ -166,12 +162,8 @@ public class Main {
     }
 
     //Дима
-    public static int getNumberTwoSybmol(int numberTwoSybmol) {
-
-        int number = numberTwoSybmol / 10;
-        int number2 = numberTwoSybmol % 10;
-
-        return number + number2;
+    public static int getNumberTwoSybmol(int NumberTwoSybmol) {
+        return 0;
     }
 
     //Саша
@@ -183,7 +175,4 @@ public class Main {
     public static boolean happyNumber(int number) {
         return false;
     }
-
-
-
 }
