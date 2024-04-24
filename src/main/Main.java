@@ -1,9 +1,14 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+
+
          /*
         Вадим
         Написать метод, который принимает строку и
@@ -39,6 +44,16 @@ public class Main {
         4) Число положительных элементов
         5) Число нулей
          */
+
+        ArrayList<Integer> list = new ArrayList<>() {{
+            add(1);
+            add(2);
+            add(-10);
+            add(0);
+            add(0);
+        }};
+
+        printMaxAndMinAndCount(list);
 
         /*
         Сева.
@@ -107,8 +122,32 @@ public class Main {
 
     //Александр
     public static void printMaxAndMinAndCount(ArrayList<Integer> list) {
+        int minElement = Collections.min(list);
+        int maxElement = Collections.max(list);
+        System.out.println("Минимальное число: " + minElement +
+                "\nМаксимальное число: " + maxElement);
+        int countNegativNumbers = 0;
+        int countPositiveNumbers = 0;
+        int countZeroNumber = 0;
+        for (int number : list) {
+            if (number < 0){
+                countNegativNumbers++;
+            } else if(number > 0){
+                countPositiveNumbers++;
+            } else if (number == 0) {
+                countZeroNumber++;
+            }
+        }
+
+
+        System.out.println("Колличество отрицательных чисел = " +countNegativNumbers +
+                "\nКолличество положительных чисел = " + countPositiveNumbers +
+                "\nКолличество нолей = " + countZeroNumber);
+
+
 
     }
+
 
     //Сева
     public static ArrayList<Integer> lettersAndNumbers(int numberFirst, int numberSecond) {
