@@ -17,6 +17,7 @@ public class Main {
         String scanner = new Scanner(System.in).nextLine();
         System.out.println(lettersAndNumbers(scanner));
 
+
         /*
         Андрей.
         Написать метод для
