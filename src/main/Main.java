@@ -80,15 +80,12 @@ public class Main {
         Написать метод, вычисляющий площадь круга,
         по заданному в параметре, радиусу.
          */
-        System.out.println(squareCircle(10));
 
         /*
         Михаил
         Написать метод, определяющий счастливое число и
         вернуть true, если - да, и - false - если нет.
          */
-
-        System.out.println(happyNumber(123123));
 
     }
 
@@ -137,34 +134,11 @@ public class Main {
 
     //Саша
     public static double squareCircle(double radius) {
-        return Math.PI * radius * radius;
-
-    }
-
-
-    public static int Sum(){
-
-        return 21 + 32 + 45;
+        return 0.0;
     }
 
     //Михаил
     public static boolean happyNumber(int number) {
-
-        int number1 = number / 100_000;
-        int number2 = number / 100_00 % 10;
-        int number3 = number / 1000 % 10;
-        int number4 = number / 100 % 10;
-        int number5 = number / 10 % 10;
-        int number6 = number % 10;
-
-        int sum1 = number1 + number2 + number3;
-        int sum2 = number4 + number5 + number6;
-
-
-        if (sum1 == sum2) {
-            return true;
-        }
         return false;
-
     }
 }
