@@ -66,6 +66,8 @@ public class Main {
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
          */
+        getSquareAndPerimetr(7);
+        getSquareAndPerimetr(8);
 
         /*
         Дима.
@@ -85,6 +87,10 @@ public class Main {
         Михаил
         Написать метод, определяющий счастливое число и
         вернуть true, если - да, и - false - если нет.
+         */
+        /*
+        ульяна
+        расчитать периметр прямоугольника
          */
 
     }
@@ -119,8 +125,11 @@ public class Main {
     }
 
     //Ульяна
-    public static void getSquareAndPerimetr() {
-
+    public static void getSquareAndPerimetr(int a) {
+            int S = a * a;
+        System.out.println("Площадь квадрата: " + S);
+            int P = 4 * a;
+        System.out.println("Периметр квадрата: " + P );
     }
 
     //Дима
@@ -137,4 +146,7 @@ public class Main {
     public static boolean happyNumber(int number) {
         return false;
     }
+//    public static void squarerectangle(int ) {
+//        int
+//    }
 }
