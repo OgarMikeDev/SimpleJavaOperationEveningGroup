@@ -141,6 +141,7 @@ public class Main {
             }
         }
 
+
         System.out.println("Колличество отрицательных чисел = " +countNegativNumbers +
                 "\nКолличество положительных чисел = " + countPositiveNumbers +
                 "\nКолличество нолей = " + countZeroNumber);
