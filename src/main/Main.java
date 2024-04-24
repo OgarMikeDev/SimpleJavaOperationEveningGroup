@@ -147,6 +147,7 @@ public class Main {
         int sum1 = number1 + number2 + number3;
         int sum2 = number4 + number5 + number6;
 
+
         if (sum1 == sum2) {
             return true;
         }
