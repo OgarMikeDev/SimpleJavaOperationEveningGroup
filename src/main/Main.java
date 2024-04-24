@@ -154,8 +154,7 @@ public class Main {
         ArrayList<Integer> rangeNumbers = new ArrayList<>();
         for (int i = numberFirst; i <= numberSecond; i++) {
             rangeNumbers.add(i);
-        }
-        return new ArrayList<>(rangeNumbers);
+        }        return new ArrayList<>(rangeNumbers);
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
