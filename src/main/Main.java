@@ -121,7 +121,6 @@ public class Main {
 
     //Александр
     public static void printMaxAndMinAndCount(ArrayList<Integer> list) {
-
         int minElement = Collections.min(list);
         int maxElement = Collections.max(list);
         System.out.println("Минимальное число: " + minElement +
