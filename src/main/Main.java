@@ -1,9 +1,14 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+
+
          /*
         Вадим
         Написать метод, который принимает строку и
@@ -40,6 +45,16 @@ public class Main {
         5) Число нулей
          */
 
+        ArrayList<Integer> list = new ArrayList<>() {{
+            add(1);
+            add(2);
+            add(-10);
+            add(0);
+            add(0);
+        }};
+
+        printMaxAndMinAndCount(list);
+
         /*
         Сева.
         Написать метод, который принимает два целых числа (границы диапазона),
@@ -62,6 +77,7 @@ public class Main {
         вывести итоги в консоль.
          */
 
+
         /*
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
@@ -80,15 +96,12 @@ public class Main {
         Написать метод, вычисляющий площадь круга,
         по заданному в параметре, радиусу.
          */
-        System.out.println(squareCircle(10));
 
         /*
         Михаил
         Написать метод, определяющий счастливое число и
         вернуть true, если - да, и - false - если нет.
          */
-
-        System.out.println(happyNumber(123123));
 
     }
 
@@ -109,12 +122,12 @@ public class Main {
 
     //Александр
     public static void printMaxAndMinAndCount(ArrayList<Integer> list) {
-
     }
+
 
     //Сева
     public static ArrayList<Integer> lettersAndNumbers(int numberFirst, int numberSecond) {
-        return new ArrayList<>();
+
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
@@ -133,34 +146,11 @@ public class Main {
 
     //Саша
     public static double squareCircle(double radius) {
-        return Math.PI * radius * radius;
-
-    }
-
-
-    public static int Sum(){
-
-        return 21 + 32 + 45;
+        return 0.0;
     }
 
     //Михаил
     public static boolean happyNumber(int number) {
-
-        int number1 = number / 100_000;
-        int number2 = number / 100_00 % 10;
-        int number3 = number / 1000 % 10;
-        int number4 = number / 100 % 10;
-        int number5 = number / 10 % 10;
-        int number6 = number % 10;
-
-        int sum1 = number1 + number2 + number3;
-        int sum2 = number4 + number5 + number6;
-
-
-        if (sum1 == sum2) {
-            return true;
-        }
         return false;
-
     }
 }
