@@ -1,6 +1,9 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +14,8 @@ public class Main {
         удаляя все остальное.
         Возвращает получившуюся строку.
          */
-
+        String scanner = new Scanner(System.in).nextLine();
+        System.out.println(lettersAndNumbers(scanner));
         /*
         Андрей.
         Написать метод для
@@ -61,11 +65,14 @@ public class Main {
         начислить ему премию 200$,
         вывести итоги в консоль.
          */
+        workWitchManagers(700,1200,200);
 
         /*
         Ульяна.
         Написать метод, который вычисляет площадь и периметр квадрата.
          */
+        getSquareAndPerimetr(7);
+        getSquareAndPerimetr(8);
 
         /*
         Дима.
@@ -74,10 +81,6 @@ public class Main {
         и выводит в консоль каждый его разряд
         на разных строках, а возвращает их сумму.
          */
-
-        System.out.println(getNumberTwoSybmol(12));
-
-
 
         /*
         Саша.
@@ -91,12 +94,34 @@ public class Main {
         Написать метод, определяющий счастливое число и
         вернуть true, если - да, и - false - если нет.
          */
+        /*
+        ульяна
+        расчитать периметр прямоугольника
+         */
+        squarerectangle(4, 5);
 
+
+
+        factorial(8);
     }
 
     //Вадим
     public static String lettersAndNumbers(String text) {
-        return "";
+
+        String regex = "[a-zA-Z]+";
+
+        Pattern pattern = Pattern.compile(regex);
+
+        Matcher matcher = pattern.matcher(text);
+
+        String n = " ";
+            while (matcher.find()) {
+                int start = matcher.start();
+                int end = matcher.end();
+                n = text.substring(start, end);
+            }
+
+        return n;
     }
 
     //Андрей
@@ -120,21 +145,49 @@ public class Main {
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
-    public static void workWitchManagers() {
+    public static void workWitchManagers(int salesOne, int salesTwo, int salesThree) {
+
+        int baseSalary = 200;
+        double commissionRate1 = 0.03;
+        double commissionRate2 = 0.05;
+        double commissionRate3 = 0.08;
+
+        double salary1 = baseSalary + salesOne * commissionRate1;
+        double salary2 = baseSalary + salesTwo * commissionRate2;
+        double salary3 = baseSalary + salesThree * commissionRate3;
+
+        double maxSalary = Math.max(salary1, Math.max(salary2,salary3));
+
+        String bestManager = maxSalary == salary1 ? "Менеджер первый" : (maxSalary == salary2 ? "Менеджер второй" : "Менеджер третий");
+
+        System.out.println("Зарплаты менеджеров:");
+        System.out.println("Менеджер один: $" + salary1);
+        System.out.println("Менеджер второй: $" + salary2);
+        System.out.println("Менеджер третий: $" + salary3);
+
+        int bonusSalary = 200;
+
+        System.out.println("\nЛучший менеджер: " + bestManager + "\nпПолучает премию: " + bonusSalary + "$");
+
+/*        System.out.println("\nBest manager: " + bestManager + "with a salary of" + bonusSalary);*/
+
+
+
+
+
     }
 
     //Ульяна
-    public static void getSquareAndPerimetr() {
-
+    public static void getSquareAndPerimetr(int a) {
+        int S = a * a;
+        System.out.println("Площадь нашего квадрата: " + S);
+        int P = 4 * a;
+        System.out.println("Периметр квадрата: " + P);
     }
 
     //Дима
-    public static int getNumberTwoSybmol(int numberTwoSybmol) {
-
-        int number = numberTwoSybmol / 10;
-        int number2 = numberTwoSybmol % 10;
-
-        return number + number2;
+    public static int getNumberTwoSybmol(int NumberTwoSybmol) {
+        return 0;
     }
 
     //Саша
@@ -154,6 +207,19 @@ public class Main {
         return false;
     }
 
+    //Ульяна
+    public static void squarerectangle(int a, int b) {
+        int P = (a + b) * 2;
+        System.out.println("Площадь прямоугольника:  " + P);
+    }
 
+    //Ульяна
+    public static void factorial(int i) {
+        int s = 1;
+        for (int a = 1; a <= i; a++) {
+            s *= a;
 
+        }
+        System.out.println(s);
+    }
 }
