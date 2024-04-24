@@ -1,9 +1,6 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,9 +11,6 @@ public class Main {
         удаляя все остальное.
         Возвращает получившуюся строку.
          */
-        String scanner = new Scanner(System.in).nextLine();
-        System.out.println(lettersAndNumbers(scanner));
-
 
         /*
         Андрей.
@@ -67,8 +61,6 @@ public class Main {
         начислить ему премию 200$,
         вывести итоги в консоль.
          */
-        workWitchManagers(700,1200,200);
-
 
 
         /*
@@ -89,6 +81,7 @@ public class Main {
         Написать метод, вычисляющий площадь круга,
         по заданному в параметре, радиусу.
          */
+        System.out.println(squareCircle(10));
 
         /*
         Михаил
@@ -96,25 +89,13 @@ public class Main {
         вернуть true, если - да, и - false - если нет.
          */
 
+        System.out.println(happyNumber(123123));
+
     }
 
     //Вадим
     public static String lettersAndNumbers(String text) {
-
-        String regex = "[a-zA-Z]+";
-
-        Pattern pattern = Pattern.compile(regex);
-
-        Matcher matcher = pattern.matcher(text);
-
-        String n = " ";
-            while (matcher.find()) {
-                int start = matcher.start();
-                int end = matcher.end();
-                n = text.substring(start, end);
-            }
-
-        return n;
+        return "";
     }
 
     //Андрей
@@ -138,37 +119,7 @@ public class Main {
     }
 
     //Вадим. Дописать 3 аргументы в первую строку метода и его реализовать
-    public static void workWitchManagers(int salesOne, int salesTwo, int salesThree) {
-
-        int baseSalary = 200;
-        double commissionRate1 = 0.03;
-        double commissionRate2 = 0.05;
-        double commissionRate3 = 0.08;
-
-        double salary1 = baseSalary + salesOne * commissionRate1;
-        double salary2 = baseSalary + salesTwo * commissionRate2;
-        double salary3 = baseSalary + salesThree * commissionRate3;
-
-        double maxSalary = Math.max(salary1, Math.max(salary2,salary3));
-
-        String bestManager = maxSalary == salary1 ? "Менеджер первый" : (maxSalary == salary2 ? "Менеджер второй" : "Менеджер третий");
-
-        System.out.println("Зарплаты менеджеров:");
-        System.out.println("Менеджер один: $" + salary1);
-        System.out.println("Менеджер второй: $" + salary2);
-        System.out.println("Менеджер третий: $" + salary3);
-
-        int bonusSalary = 200;
-
-
-        System.out.println("\nЛучший менеджер: " + bestManager + "\nпПолучает премию: " + bonusSalary + "$");
-
-/*        System.out.println("\nBest manager: " + bestManager + "with a salary of" + bonusSalary);*/
-
-
-
-
-
+    public static void workWitchManagers() {
     }
 
     //Ульяна
@@ -183,11 +134,34 @@ public class Main {
 
     //Саша
     public static double squareCircle(double radius) {
-        return 0.0;
+        return Math.PI * radius * radius;
+
+    }
+
+
+    public static int Sum(){
+
+        return 21 + 32 + 45;
     }
 
     //Михаил
     public static boolean happyNumber(int number) {
+
+        int number1 = number / 100_000;
+        int number2 = number / 100_00 % 10;
+        int number3 = number / 1000 % 10;
+        int number4 = number / 100 % 10;
+        int number5 = number / 10 % 10;
+        int number6 = number % 10;
+
+        int sum1 = number1 + number2 + number3;
+        int sum2 = number4 + number5 + number6;
+
+
+        if (sum1 == sum2) {
+            return true;
+        }
         return false;
+
     }
 }
