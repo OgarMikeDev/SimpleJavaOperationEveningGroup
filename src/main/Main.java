@@ -80,6 +80,7 @@ public class Main {
         Написать метод, вычисляющий площадь круга,
         по заданному в параметре, радиусу.
          */
+        System.out.println(squareCircle(10));
 
         /*
         Михаил
@@ -132,7 +133,14 @@ public class Main {
 
     //Саша
     public static double squareCircle(double radius) {
-        return 0.0;
+        return Math.PI * radius * radius;
+
+    }
+
+
+    public static int Sum(){
+
+        return 21 + 32 + 45;
     }
 
     //Михаил
