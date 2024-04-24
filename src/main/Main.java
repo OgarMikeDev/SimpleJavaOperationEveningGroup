@@ -94,6 +94,9 @@ public class Main {
          */
         squarerectangle(4, 5);
 
+
+
+        factorial(8);
     }
 
     //Вадим
@@ -127,10 +130,10 @@ public class Main {
 
     //Ульяна
     public static void getSquareAndPerimetr(int a) {
-            int S = a * a;
+        int S = a * a;
         System.out.println("Площадь нашего квадрата: " + S);
-            int P = 4 * a;
-        System.out.println("Периметр квадрата: " + P );
+        int P = 4 * a;
+        System.out.println("Периметр квадрата: " + P);
     }
 
     //Дима
@@ -147,9 +150,20 @@ public class Main {
     public static boolean happyNumber(int number) {
         return false;
     }
+
     //Ульяна
     public static void squarerectangle(int a, int b) {
         int P = (a + b) * 2;
         System.out.println("Площадь прямоугольника: " + P);
-   }
+    }
+
+    //Ульяна
+    public static void factorial(int i) {
+        int s = 1;
+        for (int a = 1; a <= i; a++) {
+            s *= a;
+
+        }
+        System.out.println(s);
+    }
 }
